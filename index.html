@@ -8,10 +8,13 @@
         <!-- Link CSS Style.css file-->
         
         <link rel="stylesheet" href="css/style.css">
-        
+        <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+        rel = "stylesheet">
+     <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
+     <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
     </head>
     <body>
-        <div class='moon'>
+        <!-- <div class='moon'>
             <div class='crater1'></div>
             <div class='crater2'></div>
             <div class='crater3'></div>
@@ -67,8 +70,34 @@
         </div>
         
         <div id="video"></div>
-        
-        
+         -->
+        <input type="text" id="zzzku">
+        <script>
+              $(document).ready(function() {
+                var unavailableDates =['15-02-2023', '28-02-2023'];
+                            var unavailableDatesTimeString = unavailableDates.map(function ($item) {
+                                var [day, month, year] = $item.split('-');
+                                var validDate = new Date(year, month - 1 , day);
+                                return Date.parse(validDate.getFullYear() + "-" + (validDate.getMonth()+1) + "-" +validDate.getDate());
+                            });
+                            function unavailable(date) {
+                                var dmy = Date.parse(date.getFullYear() + "-" + (date.getMonth()+1) + "-" +date.getDate());
+                                var farthestShippingDate = new Date('2023-02-08 00:00:00.000000');
+                                if (date.getTime() < farthestShippingDate.getTime()){
+                                    return [false, "", ""];
+                                } else if ($.inArray(dmy, unavailableDatesTimeString) < 0) {
+                                    return [true,"",""];
+                                } else {
+                                    return [false,"",""];
+                                }
+                            }
+          $(function() {
+              $( "#zzzku" ).datepicker({
+                beforeShowDay: unavailable
+              });
+          });
+      })
+        </script>
         <script src="js/index.js"></script>
         
     </body>

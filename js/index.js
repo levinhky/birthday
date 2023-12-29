@@ -21,6 +21,8 @@ const possibleColors = [
   "Crimson",
 ];
 
+console.log("test 1");
+
 function randomFromTo(from, to) {
   return Math.floor(Math.random() * (to - from + 1) + from);
 }

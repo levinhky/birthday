@@ -27,6 +27,8 @@ function randomFromTo(from, to) {
 
 console.log("test");
 
+console.log("test 2");
+
 function confettiParticle() {
   this.x = Math.random() * W; // x
   this.y = Math.random() * H - H; // y

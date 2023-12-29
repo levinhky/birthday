@@ -29,6 +29,8 @@ console.log("test3");
 
 console.log("test4");
 
+console.log("siba");
+
 function randomFromTo(from, to) {
   return Math.floor(Math.random() * (to - from + 1) + from);
 }

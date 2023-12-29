@@ -18,25 +18,26 @@ const possibleColors = [
   "SteelBlue",
   "SandyBrown",
   "Chocolate",
-  "Crimson"
+  "Crimson",
 ];
 
 function randomFromTo(from, to) {
   return Math.floor(Math.random() * (to - from + 1) + from);
 }
 
+console.log("test");
+
 function confettiParticle() {
   this.x = Math.random() * W; // x
   this.y = Math.random() * H - H; // y
   this.r = randomFromTo(11, 33); // radius
   this.d = Math.random() * maxConfettis + 11;
-  this.color =
-    possibleColors[Math.floor(Math.random() * possibleColors.length)];
+  this.color = possibleColors[Math.floor(Math.random() * possibleColors.length)];
   this.tilt = Math.floor(Math.random() * 33) - 11;
   this.tiltAngleIncremental = Math.random() * 0.07 + 0.05;
   this.tiltAngle = 0;
 
-  this.draw = function() {
+  this.draw = function () {
     context.beginPath();
     context.lineWidth = this.r / 2;
     context.strokeStyle = this.color;
@@ -83,7 +84,7 @@ function Draw() {
 
 window.addEventListener(
   "resize",
-  function() {
+  function () {
     W = window.innerWidth;
     H = window.innerHeight;
     canvas.width = window.innerWidth;

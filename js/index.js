@@ -10,6 +10,8 @@ const commit1 = '';
 
 const commit2 = '';
 
+const commit3 = '';
+
 const possibleColors = [
   "DodgerBlue",
   "OliveDrab",

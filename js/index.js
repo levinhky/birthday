@@ -5,6 +5,7 @@ const context = canvas.getContext("2d");
 const maxConfettis = 150;
 const particles = [];
 const go = 1;
+const live = 'you';
 const possibleColors = [
   "DodgerBlue",
   "OliveDrab",

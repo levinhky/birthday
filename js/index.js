@@ -8,6 +8,8 @@ const go = 1;
 
 const commit1 = '';
 
+const commit2 = '';
+
 const possibleColors = [
   "DodgerBlue",
   "OliveDrab",

@@ -5,6 +5,13 @@ const context = canvas.getContext("2d");
 const maxConfettis = 150;
 const particles = [];
 const go = 1;
+
+const commit1 = '';
+
+const commit2 = '';
+
+const commit3 = '';
+
 const possibleColors = [
   "DodgerBlue",
   "OliveDrab",

@@ -100,3 +100,30 @@ for (var i = 0; i < maxConfettis; i++) {
 canvas.width = W;
 canvas.height = H;
 Draw();
+
+
+const openVideo = document.getElementById("openVideo");
+const videoModal = document.getElementById("videoModal");
+const closeBtn = document.getElementById("closeVideoBtn");
+const ytplayer = document.getElementById("ytplayer");
+
+const videoURL = "https://www.youtube.com/embed/8QF9hM1MQwc?autoplay=1&rel=0";
+
+openVideo.addEventListener("click", (e) => {
+  e.preventDefault();     // chặn chuyển trang
+  videoModal.style.display = "flex";
+  ytplayer.src = videoURL; // play video
+});
+
+closeBtn.addEventListener("click", () => {
+  videoModal.style.display = "none";
+  ytplayer.src = "";       // stop video
+});
+
+// bấm ra ngoài modal => đóng
+videoModal.addEventListener("click", (e) => {
+  if (e.target === videoModal) {
+    videoModal.style.display = "none";
+    ytplayer.src = "";
+  }
+});

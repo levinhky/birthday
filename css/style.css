@@ -15,3 +15,45 @@ canvas {
   width: 100%;
   margin: 0;
 }
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(4px);
+  display: none; /* IMPORTANT: ẩn mặc định */
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+
+.modal-content {
+  background: white;
+  padding: 24px 32px;
+  border-radius: 12px;
+  text-align: center;
+  animation: popup 0.3s ease;
+  max-width: 350px;
+  width: 90%;
+}
+
+@keyframes popup {
+  from { transform: scale(0.8); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+.video-box iframe {
+  margin-top: 12px;
+  border-radius: 10px;
+}
+
+.modal-content button {
+  margin-top: 14px;
+  padding: 10px 24px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  background: #ff69b4;
+  color: white;
+  cursor: pointer;
+}
